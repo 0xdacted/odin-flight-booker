@@ -23,3 +23,4 @@ Airport.create! ([
 }])
 
 p "Created #{Airport.count} airports"
+
