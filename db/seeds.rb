@@ -9,7 +9,7 @@
 Airport.destroy_all
 Flight.destroy_all
 
-airports = Airport.create ([
+airports = Airport.create! ([
 {
   code: "SFO"
 },
@@ -24,8 +24,9 @@ airports = Airport.create ([
 }])
 
 p "Created #{Airport.count} airports"
+p "#{airports.first.id} #{airports.at(2).id} #{airports.last.id}"
 
-Flight.create ([
+flights = Flight.create! ([
   {
     departure_id: airports.first.id, 
     arrival_id: airports.last.id, 
@@ -101,3 +102,6 @@ Flight.create ([
   ])
 
   p "Created #{Flight.count} flights"
+  p "#{airports.first} #{airports.at(2)} #{airports.last}"
+  p "#{flights}"
+
