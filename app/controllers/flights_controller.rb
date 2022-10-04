@@ -6,4 +6,5 @@ class FlightsController < ApplicationController
     @month_options = Flight.all.map { |flight| [flight.departure_time.month] }.uniq
     @day_options = Flight.all.map { |flight| [flight.departure_time.day] }.uniq
   end
+
 end
