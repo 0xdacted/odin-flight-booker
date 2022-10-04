@@ -24,7 +24,7 @@ airports = Airport.create! ([
 }])
 
 p "Created #{Airport.count} airports"
-p "#{airports.first.id} #{airports.at(2).id} #{airports.last.id}"
+
 
 flights = Flight.create! ([
   {
@@ -102,6 +102,5 @@ flights = Flight.create! ([
   ])
 
   p "Created #{Flight.count} flights"
-  p "#{airports.first} #{airports.at(2)} #{airports.last}"
-  p "#{flights}"
+ 
 
