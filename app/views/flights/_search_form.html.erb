@@ -1,6 +1,6 @@
-<%= select_tag(:departure_airport, options_for_select(@airport_options))%>
-<%= select_tag(:arrival_airport, options_for_select(@airport_options))%>
-<%= select_tag(:year, options_for_select(@year_options))%>
-<%= select_tag(:month, options_for_select(@month_options))%>
-<%= select_tag(:day, options_for_select(@day_options))%>
+<%= select_tag(:departure_airport, options_for_select(@airport_options), {prompt: 'Departure:'})%>
+<%= select_tag(:arrival_airport, options_for_select(@airport_options), {prompt: 'Arrival:'})%>
+<%= select_tag(:year, options_for_select(@year_options), {prompt: 'Year:'})%>
+<%= select_tag(:month, options_for_select(@month_options), {prompt: 'Month:'})%>
+<%= select_tag(:day, options_for_select(@day_options), {prompt: 'Day:'})%>
 <%= submit_tag("Confirm")%>
