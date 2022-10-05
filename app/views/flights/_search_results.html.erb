@@ -1,13 +1,16 @@
-<% i = 0 %>
-<% @available_flights.each do |flight| %>
-  <h2> <%= "Flight #{i+= 1}:"%> </h2>
-  <h3> Departing: </h3>
-  <%= flight.departure_airport.code %>
-  <h3> Arriving: </h3>
-  <%= flight.arrival_airport.code %>
-  <h3> At: </h3>
-  <%= flight.departure_time %>
-  <h3> Duration: </h3>
-  <%= "#{flight.duration / 60} hours" %>
-
+<%= form_with(url: "bookings#new", method: "get") do |form| %>
+  <% @available_flights.each do |flight| %>
+    <div> <h2> <%= "Flight #{flight.id }:"%> </h2>  
+    <p> Select: <%= form.radio_button :booking_option, flight.id  %> </p>
+    <h3> Departing: </h3>
+    <%= flight.departure_airport.code %>
+    <h3> Arriving: </h3>
+    <%= flight.arrival_airport.code %>
+    <h3> At: </h3>
+    <%= flight.departure_time %>
+    <h3> Duration: </h3>
+    <%= "#{flight.duration / 60} hours" %>
+  <% end %>
+  <%= submit_tag("Book")%>
 <% end %>
+
