@@ -1,8 +1,8 @@
 <% @available_flights.each do |flight| %>
   <h3> Departing: </h3>
-  <%= flight.departure_airport %>
+  <%= flight.departure_airport.code %>
   <h3> Arriving: </h3>
-  <%= flight.arrival_airport %>
+  <%= flight.arrival_airport.code %>
   <h3> At: </h3>
   <%= flight.departure_time %>
 
