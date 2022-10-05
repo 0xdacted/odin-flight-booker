@@ -1,0 +1,9 @@
+<% @available_flights.each do |flight| %>
+  <h3> Departing: </h3>
+  <%= flight.departure_airport %>
+  <h3> Arriving: </h3>
+  <%= flight.arrival_airport %>
+  <h3> At: </h3>
+  <%= flight.departure_time %>
+
+<% end %>
