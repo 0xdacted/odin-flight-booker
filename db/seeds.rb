@@ -99,6 +99,67 @@ flights = Flight.create! ([
     departure_time: "2022-10-05 22:00:00", 
     duration: 280
   },
+  {
+    departure_id: airports.at(0).id, 
+    arrival_id: airports.at(1).id, 
+    departure_time: "2022-03-07 08:00:00", 
+    duration: 140
+  },
+  {
+    departure_id: airports.at(1).id, 
+    arrival_id: airports.at(0).id, 
+    departure_time: "2022-04-08 20:00:00", 
+    duration: 140
+  },
+  {
+    departure_id: airports.at(1).id, 
+    arrival_id: airports.first.id, 
+    departure_time: "2022-12-09 06:00:00", 
+    duration: 260
+  },
+  {
+    departure_id: airports.first.id, 
+    arrival_id: airports.at(1).id, 
+    departure_time: "2022-05-10 13:00:00", 
+    duration: 260
+  },
+
+  {
+    departure_id: airports.at(0).id, 
+    arrival_id: airports.first.id, 
+    departure_time: "2022-12-09 06:00:00", 
+    duration: 260
+  },
+  {
+    departure_id: airports.first.id, 
+    arrival_id: airports.at(0).id, 
+    departure_time: "2022-05-10 13:00:00", 
+    duration: 340
+  },
+  {
+    departure_id: airports.at(1).id, 
+    arrival_id: airports.last.id, 
+    departure_time: "2022-05-11 14:00:00", 
+    duration: 60
+  },
+  {
+    departure_id: airports.last.id, 
+    arrival_id: airports.at(1).id, 
+    departure_time: "2022-06-12 21:00:00", 
+    duration: 60
+  },
+  {
+    departure_id: airports.at(0).id, 
+    arrival_id: airports.last.id, 
+    departure_time: "2021-07-13 15:00:00", 
+    duration: 360
+  },
+  {
+    departure_id: airports.last.id, 
+    arrival_id: airports.at(0).id, 
+    departure_time: "2020-08-14 19:00:00", 
+    duration: 360
+  }
   ])
 
   p "Created #{Flight.count} flights"

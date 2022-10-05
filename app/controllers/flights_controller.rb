@@ -8,8 +8,7 @@ class FlightsController < ApplicationController
 
   def find_flights
     Flight.where(departure_airport: params[:departure_airport],
-                arrival_airport: params[:arrival_airport],
-                departure_time: params[:departure_time]
+                arrival_airport: params[:arrival_airport]
     )
   end
 
