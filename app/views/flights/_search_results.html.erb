@@ -12,6 +12,7 @@
     <%= "#{flight.duration / 60} hours" %>
   <% end %>
   <% hidden_field_tag :passengers, params[:passengers]%>
-  <%= submit_tag("Book")%>
+  
+  <p> <%= submit_tag("Book")%> </p>
 <% end %>
 
