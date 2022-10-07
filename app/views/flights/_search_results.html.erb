@@ -1,4 +1,4 @@
-<%= form_with(url: "bookings#new", method: "get") do |form| %>
+<%= form_with(url: "bookings/new/", method: "get") do |form| %>
   <% @available_flights.each do |flight| %>
     <div> <h2> <%= "Flight #{flight.id }:"%> </h2>  
     <p> Select: <%= form.radio_button :booking_option, flight.id  %> </p>
@@ -11,6 +11,7 @@
     <h3> Duration: </h3>
     <%= "#{flight.duration / 60} hours" %>
   <% end %>
+  <% hidden_field_tag :passengers, params[:passengers]%>
   <%= submit_tag("Book")%>
 <% end %>
 
