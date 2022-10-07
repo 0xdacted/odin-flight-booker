@@ -2,8 +2,8 @@
   <% i = 1 %>
   <% fields_for :passengers do |passenger| %>
     <%= "Passenger #{i}" %>
-    <%= passenger.text_field :name, placeholder: "Name":, required: true %>
-    <%= passenger.email_field :email, placeholder: "name@example.com", required: true %>
+    <%= text_field :name, placeholder: "Name:", required: true %>
+    <%= email_field :email, placeholder: "name@example.com", required: true %>
     <% i += 1 %>
   <% end %>
   <%= hidden_field_tag :flight_id, value: params[:flight] %>
