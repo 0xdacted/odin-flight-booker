@@ -10,8 +10,8 @@
 <h3>Scheduled Departure:</h3>
 <%= @selected_flight.departure_time %>
 
-<h3>Scheduled Arrival:</h3>
-<%= (@selected_flight.departure_time + @selected_flight.duration).strftime('%H:%M')%>
+<h3>Flight Duration:</h3>
+<%= "#{(@selected_flight.duration / 60)} hours" %>
 
 <%= render "new_booking_form" %>
 
