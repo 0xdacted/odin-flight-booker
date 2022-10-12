@@ -11,7 +11,7 @@
     <h3> Duration: </h3>
     <%= "#{flight.duration / 60} hours" %>
   <% end %>
-  <% hidden_field_tag :passengers, params[:passengers]%>
+  <%= hidden_field_tag :passengers, params[:passengers]%>
   
   <p> <%= submit_tag("Book")%> </p>
 <% end %>
