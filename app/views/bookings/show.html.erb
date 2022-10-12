@@ -1,0 +1,22 @@
+<h2> Booking info:</h2>
+  <div>Flight number: 
+    <p> <%= @flight.id %></p>
+  </div>
+  <div>Departing:
+    <p> <%= @flight.departure_airport.code %></p>
+  </div>
+  <div>Arriving:
+    <p> <%= @flight.arrival_airport.code %></p>
+  </div>
+  <div>At:
+    <p> <%= @flight.departure_time %></p>
+  </div>
+  <div>Duration:
+    <p> <%= @flight.duration %></p>
+  </div>
+
+<h2>Passenger info:</h2>
+  <%@booking.passengers each do |passenger|%>
+    <div><p><%= passenger.name %></p></div>
+    <div><p><%= passenger.email %></p></div>
+  <% end %>

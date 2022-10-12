@@ -16,6 +16,11 @@ class BookingsController < ApplicationController
     end
   end
 
+  def show
+    @booking = Booking.find(params[:id])
+    @flight = @booking.flight
+  end
+
   private
   def booking_params
     params.require(:booking).permit(
