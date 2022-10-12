@@ -11,7 +11,7 @@
     <% end %>
  
   <%= hidden_field_tag :tickets, value: params[:tickets] %>
-  <%= hidden_field_tag :flight_id, value: params[:flight_id] %>
-  <%= submit_tag("Book")%>
+  <%= hidden_field_tag :flight_id, value: @selected_flight.id %>
+  <%= submit_tag("Confirm Booking")%>
 
 <% end %>
