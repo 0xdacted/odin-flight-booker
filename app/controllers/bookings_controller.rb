@@ -6,5 +6,7 @@ class BookingsController < ApplicationController
     @pax = params[:passengers].to_i
     @pax.times {@booking.passengers.build }
   end
+
+ 
   
 end
