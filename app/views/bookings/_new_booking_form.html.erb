@@ -10,6 +10,7 @@
       </div>
     <% end %>
   <% end %>
+  <%= hidden_field_tag :tickets, value: params[:tickets] %>
   <%= hidden_field_tag :flight_id, value: params[:flight_id] %>
   <%= submit_tag("Book")%>
 

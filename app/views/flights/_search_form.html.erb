@@ -2,6 +2,6 @@
 <%= select_tag(:departure_airport, options_for_select(@airport_options), {prompt: 'Departure:'})%>
 <%= select_tag(:arrival_airport, options_for_select(@airport_options), {prompt: 'Arrival:'})%>
 <%= select_tag(:departure_time, options_for_select(@date_options), {prompt: 'Date:'})%>
-<%= select_tag(:passengers, options_for_select(1..4), {prompt: 'Passengers'})%>
+<%= select_tag(:tickets, options_for_select(1..4), {prompt: 'Passengers'})%>
 <%= submit_tag("Confirm")%>
 <% end %>
