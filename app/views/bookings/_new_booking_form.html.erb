@@ -1,6 +1,6 @@
 <%= form_with model: @booking do |form| %>
   <% i = 1 %>
-  <%@pax.times do %>
+  
     <%= form.fields_for :passengers do |passenger_form| %>
       <div>
       <%= "Passenger #{i}:" %>
@@ -9,7 +9,7 @@
       <% i += 1 %>
       </div>
     <% end %>
-  <% end %>
+ 
   <%= hidden_field_tag :tickets, value: params[:tickets] %>
   <%= hidden_field_tag :flight_id, value: params[:flight_id] %>
   <%= submit_tag("Book")%>
