@@ -8,9 +8,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @flight = Flight.find(params[:booking_option])
+    @booking = @flight.bookings.new(booking_params)
     if @booking.save
-      render @booking
+      redirect_to 'booking#show'
     else 
       redirect_to root_path
     end
@@ -23,11 +24,7 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.require(:booking).permit(
-      :flight_id,
-      :tickets,
-      passengers_attributes: [:name, :email]
-    )
+    params.require(:booking).permit(:flight_id, :tickets, passengers_attributes: [:name, :email])
   end
 
 end
